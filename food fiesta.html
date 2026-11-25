@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Festival - School Name </title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Global Colors */
+        :root {
+            --primary-color: #1e90ff; /* Blue as the main color */
+            --secondary-color: #f0f8ff; /* Light blue for background sections */
+            --text-color: #333;
+            --light-text-color: #555;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: var(--primary-color);
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #e0e0e0;
+        }
+
+        /* Event Intro Section */
+        .event-intro {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: var(--secondary-color);
+        }
+
+        .event-intro h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .event-intro p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: var(--light-text-color);
+        }
+
+        /* Highlight Section */
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .highlight-box {
+            background-color: var(--secondary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .highlight-box h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .highlight-box p {
+            font-size: 16px;
+            color: var(--light-text-color);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 40px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .gallery h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Icon Styles */
+        .fa-icon {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>School Name</h1>
+        <h2>Food festival 2024</h2>
+        <p>A Celebration of Flavors, Music, and Fun!</p>
+    </header>
+
+    <section class="event-intro">
+        <h3>Event Highlights</h3>
+        <p>Our recent Food Festival was a delightful blend of various food stalls, live performances and fun activities. Students, teachers, and visitors enjoyed a day filled with mouth-watering dishes and entertaining performances by talented artists.</p>
+    </section>
+
+    <section class="highlights">
+        <div class="highlight-box">
+            <i class="fas fa-utensils fa-icon"></i>
+            <h4>Delicious Foods</h4>
+            <p>A variety of stalls offering food and snacks such sharwamas, popcorn, fries, candy and refreshing beverages</p>
+        </div>
+        <div class="highlight-box">
+            <i class="fas fa-music fa-icon"></i>
+            <h4>Live Performances</h4>
+            <p>Artists and students showcased their talents through music and dance making the day lively and memorable.</p>
+        </div>
+        <div class="highlight-box">
+            <i class="fas fa-smile-beam fa-icon"></i>
+            <h4>Fun Activities</h4>
+            <p>Games and interactive sessions kept everyone entertained and engaged throughout the event.</p>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h3>Event Gallery</h3>
+        <div class="gallery-grid">
+            <img src="Assets\youth pic.jpg" alt="Delicious food at the fiesta">
+            <img src="Assets\youth pic.jpg" alt="Students enjoying the fiesta">
+            <img src="Assets\youth pic.jpg" alt="Live performance at the fiesta">
+            <img src="Assets\youth pic.jpg" alt="Artist performing on stage">
+        </div>
+    </section>
+</body>
+</html>

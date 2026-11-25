@@ -1,0 +1,874 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: rgb(253, 242, 242);
+}
+#home{
+    background-image: url('Assets/qdisn1HLQaCFuCsmBGEo.jpeg');
+    height:700px;
+    background-repeat:no-repeat;
+    background-color:rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    padding-top:10px;
+    background-size:cover;
+}
+.hero {
+    min-height: 100vh; /* Makes the hero section take the full viewport height */
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-content {
+    padding-top: 40px; 
+    padding-bottom: 40px; 
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Sticky Navbar */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    transition: background-color 0.3s ease-in-out, height 0.3s ease-in-out; /* Transition for both color and height */
+    background-color: #2679f7; /* Default background */
+    height: 100px; /* Default height */
+}
+
+.navbar-scrolled {
+    background-color: white !important; /* Background color when scrolled */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    height: 60px; /* Reduced height when scrolled */
+}
+
+.navbar-scrolled .nav-link {
+    color: black !important; /* Text color when scrolled */
+}
+
+.navbar-scrolled .navbar-brand img {
+    filter: brightness(0); /* Logo brightness when scrolled */
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: white; /* Default text color */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.navbar-logo {
+    transition: display 0.3s ease-in-out; 
+}
+/* Default navbar styling (unchanged) */
+
+/* Mobile and tablet specific styles */
+@media (max-width: 768px) {
+    .navbar-nav {
+        padding: 0;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 0;
+        padding: 0;
+        width: 100%; /* Keep full width for each item */
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        background-color: white;
+        border-radius: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+        padding: 10px 15px; /* Reduced padding for smaller height */
+        text-align: center;
+        color: #333; /* Dark text color */
+        border-bottom: 1px solid #e0e0e0;
+        display: block;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        background-color: #f8f9fa;
+        box-shadow: none;
+    }
+
+    .navbar-collapse {
+        background-color: #ffffff;
+    }
+
+    .navbar-toggler {
+        margin-top: 10px;
+    }
+
+    .navbar {
+        position: relative;
+        z-index: 9999;
+        background-color: transparent;
+    }
+
+    .navbar.fixed-top {
+        background-color: #ffffff;
+        color: #333; /* Dark text color after scrolling */
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .navbar.fixed-top .nav-link {
+        color: #333; /* Ensure links are visible on white background */
+    }
+
+    .navbar-toggler-icon {
+        background-color: #333; /* Dark icon color for visibility */
+    }
+}
+
+header {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header.scrolled {
+    background-color: white !important; /* Ensure the color change is applied */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section p.lead {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+#dvv{
+    background:linear-gradient(white,rgb(223, 251, 255),rgb(253, 247, 247));
+}
+/* Highlights Section */
+.recent-highlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.ps{
+    font-size:40px;
+    margin-bottom:0px;
+    color:black;
+    margin-left:200px;
+    font-weight:bolder;
+}
+#about2{
+    padding-left:100px;
+}
+.line{
+    background-color:rgb(35, 147, 252);
+    width:500px;
+    height:1px;
+    margin-left:150px;
+}
+.line3{
+    background-color:rgb(35, 147, 252);
+    width:200px;
+    height:3px;
+    margin-left:450px;
+    margin-top:0px;
+}
+.line4{
+    background-color:rgb(35, 147, 252);
+    width:220px;
+    height:3px;
+    margin-left:550px;
+    margin-top:2px;
+}
+.line5{
+    background-color:rgb(35, 147, 252);
+    width:120px;
+    height:3px;
+    margin-left:485px;
+    margin-top:2px;
+}
+#line2{
+    background-color:rgb(35, 147, 252);
+    width:1360px;
+    height:1px;
+}
+.para{
+    font-size:20px;
+    display:inline-block;
+    color:black;
+    margin-left:150px;
+}
+#oa {
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    height: 150px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#eu {
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    height: 100px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#cu {
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    height: 100px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#f {
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    height: 350px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+/* Facilities and Programs Section */
+/* Facilities and Programs Section */
+#wh {
+    background-color: rgb(230, 229, 229);
+    height: 600px;
+}
+
+.fap-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Default styling for .fap */
+.fap {
+    width: 290px;
+    height: 190px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    background-color: white; /* Background color for each .fap div */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns the content inside */
+    padding: 20px;
+    text-align: center; /* Center-aligns text inside */
+}
+
+/* Background color for different IDs */
+#lb {
+    background-color: rgb(217, 231, 252);
+}
+#lb:hover {
+    background-color: rgb(195, 217, 250);
+}
+#db {
+    background-color: rgb(186, 221, 253);
+}
+#db:hover {
+    background-color: rgb(175, 213, 248);
+}
+#lbb {
+    background-color: rgb(227, 238, 253);
+}
+#lbb:hover {
+    background-color: rgb(195, 217, 250);
+}
+#dbb {
+    background-color: rgb(186, 221, 253);
+}
+#dbb:hover{
+    background-color: rgb(175, 213, 248);
+}
+.fap img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+/* Responsive adjustments */
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+    .fap {
+        width: 290px; /* Original width */
+        height: 190px; /* Original height */
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    .fap {
+        width: 220px; /* Adjust width for tablets */
+        height: auto; /* Adjust height based on content */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+    .fap-container {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items */
+        gap: 10px; /* Adjust gap */
+    }
+
+    .fap {
+        width: 90%; /* Adjust width for mobile devices */
+        max-width: 290px; /* Maximum width to maintain design */
+        height: auto; /* Adjust height based on content */
+    }
+}
+
+
+/* Container for the image and calendar */
+#int {
+    display: flex;
+    align-items: flex-start; 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 0 auto; /* Center container horizontally */
+}
+
+/* Styling for the image */
+.image-container {
+    flex: 3; /* This will take up 3 parts of the available space */
+    margin-right: 20px; /* Space between the image and the calendar */
+}
+
+.image-container img {
+    max-height: 460px; /* Adjust to your desired height */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the calendar */
+#cale {
+    flex: 1; /* This will take up 1 part of the available space */
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px; 
+    width: 300px; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #int {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center;
+    }
+
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #cale {
+        width: 100%; 
+    }
+}
+.container2 {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.profile-img {
+    width: 250px;
+    height: 290px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.profile-text {
+    flex: 1;
+    margin-top:25px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.learn-more:hover {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+}
+/* Overlay Boxes Styles */
+.overlay-boxes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; 
+    justify-content: center;
+    padding: 10px;
+}
+#overlay-text {
+    font-size:40px;
+    color:black;
+    position: absolute;
+    text-align:center;
+    padding-top:10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#overlay-text2 {
+    position: absolute;
+    color: blue;
+    font-size: 45px;
+    text-align:center !important;
+    font-weight: bold;
+    padding-top: 20px;
+    z-index: 10; /* Make sure it's above the image */
+}
+.box {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 40%; 
+    height:120px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 10px; 
+}
+
+/* Remove margin from the last box */
+.box:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #int {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center;
+    }
+
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #cale {
+        width: 100%; 
+    }
+
+    .recent-highlights {
+        flex-direction: column;
+    }
+
+    .box2 {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.ak{
+    background-color:rgb(228, 225, 225);
+}
+.b {
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+}
+
+.nb {
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+}
+
+.m {
+    color: grey;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.image-container2 {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+.image-container2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.shadow-overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+.shadow-overlay2 h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.shadow-overlay2 p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+.shadow-overlay2 .btn-learn-more {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+.shadow-overlay2 .btn-learn-more:hover {
+    background: white;
+    color: rgb(41, 114, 248);
+}
+#boxx {
+    width: 70%;
+    max-width: 600px;
+    height: 290px;
+    margin-top: 20px;
+    background: linear-gradient(rgb(173, 245, 255),rgb(238, 235, 235) , rgb(158, 210, 253));
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    margin-left: 5%;
+}
+
+#boxx:hover {
+    background: linear-gradient(rgb(147, 242, 255), rgb(221, 219, 219), rgb(122, 195, 255));
+    transition: 2s;
+    transform: scale(1.05);
+}
+
+/* Container for highlights with horizontal scrolling */
+.highlights .container {
+    display: flex;
+    overflow-x: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+/* Box styling */
+.box2 {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-height: 450px;
+    overflow: hidden;
+    flex: 1 1 calc(30% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.box2 img {
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.box2:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+
+
+
+/* Responsive behavior for tablets and smaller screens */
+@media (max-width: 768px) {
+    .highlights .container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .box2 {
+        width: 140px; /* Further reduced width for smaller screens */
+       
+        margin-left:30px;
+    }
+
+    .box2 img {
+        max-height: 130px; /* Reduced height for smaller screens */
+    }
+
+    .box2 h3 {
+        font-size: 0.875rem; /* Smaller text for smaller screens */
+    }
+
+    .box2 .btn {
+        font-size: 0.625rem; /* Even smaller button text for better fit */
+        padding: 0.25rem 0.75rem; /* Smaller padding for the button */
+    }
+}
+
+/* Responsive behavior for larger screens */
+@media (min-width: 768px) {
+    .highlights .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .box2 {
+        width: calc(33.333% - 40px); /* Three boxes per row with more space on larger screens */
+    }
+}
+
+/* Adjusted Grid Layout for Images */
+.grid-container {
+    margin-left:70px;
+}
+
+.grid-container img {
+    width: 100%; /* Makes images fill their grid cell */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures images cover the area */
+    margin-right:5px;
+    margin-bottom:10px;
+}
+
+
+.box2:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+.acbox {
+    width: 340px;
+    height: 420px;
+    display: inline-block;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(0, 81, 255);
+    margin-left: 70px;
+    background-color:#5da9fa;
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.acbox:hover {
+    transform: scale(1.05);
+    background-color:#50a0f7;
+}
+
+.sch-i{
+    padding-top:220px;
+    text-align:center;
+    font-size:30px;
+    font-weight:bolder;
+    color:white;
+}
+.sch-i:hover{
+    color:black;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff; 
+    border-radius: 5px; 
+    display: none; /* Initially hidden, will be shown via JS */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.back-to-top::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: solid white;
+    border-width: 3px 3px 0 0;
+    transform: rotate(-45deg);
+    display: block;
+    margin: 0 auto; /* Centers the arrow */
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Teacher Profiles */
+.teacher-profile {
+    border: 1px solid #ddd; /* Light border for subtle box effect */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Add some padding inside the box */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+}
+
+.teacher-profile:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Carousel container */
+.carousel {
+    position: relative;
+}
+
+
+footer {
+    padding: 3rem 0;
+    background-color: black;
+    color: white;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+/* Useful Links hover effect */
+footer ul li a:hover {
+    color: rgb(0, 140, 255) !important;
+}
+
+footer form .form-control {
+    margin-bottom: 1rem;
+}
+
+footer form .btn {
+    background-color: #007bff;
+    border: none;
+}
+/* More pronounced headings */
+footer h3,
+#f h2,
+#int h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #int {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; 
+    }
+
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #cale {
+        width: 100%; /* Calendar takes full width on small screens */
+    }
+
+    .recent-highlights {
+        flex-direction: column;
+    }
+
+    .box2 {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}

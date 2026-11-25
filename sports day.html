@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interhouse Sports Competition - Mary Queen of Peace Girls' School</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Global Colors */
+        :root {
+            --primary-color: #1e90ff; /* Dodger blue as the main color */
+            --secondary-color: #ffa500; /* Orange for vibrancy */
+            --background-color: #f0f8ff; /* Alice blue background */
+            --text-color: #333;
+        }
+
+        /* Header Section */
+        .header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('Assets/IMG_180.JPG');
+            background-repeat:no-repeat;
+            background-size:cover;
+            height: 500px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color:rgba(0, 0, 0, 0.6);
+            background-blend-mode: darken;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* About Section */
+        .about {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: var(--background-color);
+        }
+
+        .about h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .about p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Event Highlights */
+        .highlights {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .highlights h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .highlight-box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .highlight-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .highlight-box img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .highlight-box:hover img {
+            transform: scale(1.05);
+        }
+
+        .highlight-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .highlight-box:hover .highlight-info {
+            opacity: 1;
+        }
+
+        .highlight-info h4 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .highlight-info p {
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Mary Queen of Peace Girls' School</h1>
+        <p>Interhouse Sports Competition 2024</p>
+    </header>
+
+    <section class="hero">
+        <h2>Feel the Excitement of Competition!</h2>
+    </section>
+
+    <section class="about">
+        <h3>About the Event</h3>
+        <p>The Interhouse Sports Competition is one of the most anticipated events of the year at Mary Queen of Peace Girls' School.
+             It's a time when students from different houses compete in a range of sports
+             showcasing their skills, sportsmanship, and team spirit. This year was filled with unforgettable moments and outstanding 
+             achievements.</p>
+    </section>
+
+    <section class="highlights">
+        <h3>Event Highlights</h3>
+        <div class="highlights-grid">
+            <div class="highlight-box">
+                <img src= "Assets\IMG_1810.JPG"alt="100m Race">
+                <div class="highlight-info">
+                    <h4>Running</h4>
+                    <p>Speed and agility were on full display as competitors gave their all in the sprints.</p>
+                </div>
+            </div>
+        
+            <div class="highlight-box">
+                <img src="Assets\IMG_1794.JPG" alt="Long Jump">
+                <div class="highlight-info">
+                    <h4>Shotput</h4>
+                    <p>Our jumpers soared to new heights, demonstrating their incredible strength and technique.</p>
+                </div>
+            </div>
+    
+        
+            <div class="highlight-box">
+                <img src="Assets\IMG_1806.JPG"alt="Long Jump">
+                <div class="highlight-info">
+                    <h4>Long Jump</h4>
+                    <p>Our jumpers soared to new heights, demonstrating their incredible strength and technique.</p>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <img src="Assets\IMG_1805.JPG" alt="Long Jump">
+                <div class="highlight-info">
+                    <h4>Shotput</h4>
+                    <p>Our jumpers soared to new heights, demonstrating their incredible strength and technique.</p>
+                </div>
+            </div>
+    
+
+            <div class="highlight-box">
+                <img src="Assets\IMG_1804.JPG" alt="Team Spirit">
+                <div class="highlight-info">
+                    <h4>Team Spirit</h4>
+                    <p>Every house brought their best supporters, filling the event with songs, chants, and color.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

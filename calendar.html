@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Calendar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="calendarr.css">
+</head>
+<body>
+    <h1 class="calendar-title">School Calendar</h1> <!-- Moved outside the calendar container -->
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+            <h2 id="monthYear"></h2>
+            <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <table class="calendar-table">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody">
+                <!-- Calendar dates will be generated here -->
+            </tbody>
+        </table>
+        <div id="eventDetails" class="event-details">
+            <!-- Event details will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        const calendarBody = document.getElementById('calendarBody');
+        const monthYear = document.getElementById('monthYear');
+        const eventDetails = document.getElementById('eventDetails');
+
+        const events = {
+            '2024-09-05': 'First Day of Term <i class="fas fa-school"></i>',
+            '2024-09-12': 'Parent-Teacher Meeting <i class="fas fa-users"></i>',
+            '2024-10-01': 'Teacher’s Day Celebration <i class="fas fa-chalkboard-teacher"></i>',
+            '2024-10-15': 'Science Fair <i class="fas fa-flask"></i>',
+            '2024-11-05': 'Sports Day <i class="fas fa-running"></i>',
+            '2024-11-25': 'Mid-term Exams Begin <i class="fas fa-pen-alt"></i>',
+            '2024-12-15': 'School Concert <i class="fas fa-music"></i>',
+            '2024-12-20': 'Last Day of Term <i class="fas fa-calendar-check"></i>',
+        };
+
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+
+        // Ensure calendar only starts from 2024
+        if (currentYear < 2024) {
+            currentYear = 2024;
+        }
+
+        document.getElementById('prevMonth').addEventListener('click', () => {
+            if (currentMonth === 0) {
+                currentMonth = 11;
+                currentYear--;
+            } else {
+                currentMonth--;
+            }
+
+            if (currentYear < 2024) {
+                currentYear = 2024;
+                currentMonth = 0;
+            }
+
+            renderCalendar();
+        });
+
+        document.getElementById('nextMonth').addEventListener('click', () => {
+            if (currentMonth === 11) {
+                currentMonth = 0;
+                currentYear++;
+            } else {
+                currentMonth++;
+            }
+            renderCalendar();
+        });
+
+        function renderCalendar() {
+            calendarBody.innerHTML = '';
+            monthYear.textContent = new Date(currentYear, currentMonth).toLocaleString('default', { month: 'long', year: 'numeric' });
+
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+            let date = 1;
+            for (let i = 0; i < 6; i++) {
+                let row = document.createElement('tr');
+
+                for (let j = 0; j < 7; j++) {
+                    let cell = document.createElement('td');
+                    if (i === 0 && j < firstDay) {
+                        cell.textContent = '';
+                    } else if (date > daysInMonth) {
+                        break;
+                    } else {
+                        cell.textContent = date;
+
+                        const fullDate = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${date.toString().padStart(2, '0')}`;
+                        if (events[fullDate]) {
+                            cell.classList.add('highlight');
+                            cell.addEventListener('click', () => {
+                                eventDetails.innerHTML = `<i class="fas fa-calendar-alt"></i> ${events[fullDate]}`;
+                            });
+                        }
+
+                        date++;
+                    }
+                    row.appendChild(cell);
+                }
+                calendarBody.appendChild(row);
+            }
+        }
+
+        renderCalendar();
+    </script>
+</body>
+</html>

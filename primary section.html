@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0051ff;
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200%;
+            height: 150%;
+            background: radial-gradient(circle, #7ba9ff, #0051ff);
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        #head-teacher-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            gap: 20px;
+        }
+
+        #head-teacher-image {
+            flex: 0 0 280px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        #head-teacher-image:hover {
+            transform: scale(1.05);
+        }
+
+        #head-teacher-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #head-teacher-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #head-teacher-info h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #0051ff;
+        }
+
+        #head-teacher-info p {
+            font-size: 18px;
+            margin-top: 0;
+            color: #666;
+        }
+
+        #primary-section-text {
+            flex: 1;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .subject-section {
+            margin: 40px 0;
+        }
+
+        .subject-header {
+            text-align: center;
+            color: #0051ff;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .subject-box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between boxes */
+            justify-content: center; /* Center boxes */
+        }
+
+        .subject-box {
+            flex: 1 1 calc(33.33% - 40px); /* Adjusts box width and margin */
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e2e2e2;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .subject-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .subject-header-box {
+            background-color: #0051ff;
+            padding: 15px;
+            color: white;
+            font-size: 22px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .subject-content {
+            padding: 20px;
+        }
+
+        .subject-content ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .subject-content ul li {
+            padding: 8px 0;
+            font-size: 16px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .subject-content ul li i {
+            color: #0051ff;
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0051ff;
+            color: white;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200%;
+            height: 150%;
+            background: radial-gradient(circle, #7ba9ff, #0051ff);
+            z-index: -1;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            #head-teacher-section {
+                flex-direction: column;
+            }
+
+            .subject-box-container {
+                flex-direction: column;
+                align-items: center; /* Center boxes vertically on smaller screens */
+            }
+
+            .subject-box {
+                width: calc(100% - 40px);
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Primary Section</h1>
+    </header>
+
+    <div class="main-content">
+        <section id="head-teacher-section">
+            <div id="head-teacher-image">
+                <img src="Assets\th (1).jpeg" alt="Head Teacher">
+                <div id="head-teacher-info">
+                    <h2>Mr. Smith</h2>
+                    <p> Deputy Head Teacher (Primary)</p>
+                </div>
+            </div>
+            <div id="primary-section-text">
+                <p><i class="fas fa-book-reader"></i> Welcome to the primary section of our school. Our aim is to provide a comprehensive and engaging educational experience for our young learners. We emphasize a balanced approach that includes both academic and extracurricular activities, fostering an environment where students can thrive and discover their unique strengths.</p>
+                <p><i class="fas fa-star"></i> We believe in nurturing each child’s potential by offering a curriculum that is rich in diversity and designed to build foundational skills in key areas like literacy, numeracy, and creative thinking. Our dedicated staff are committed to supporting students’ individual learning journeys, ensuring they are well-prepared for the next stages of their education.</p>
+            </div>
+        </section>
+
+        <div class="subject-section">
+            <h3 class="subject-header">Subjects Offered</h3>
+
+            <div class="subject-box-container">
+                <div class="subject-box" id="box1">
+                    <div class="subject-header-box">Grade 1-2</div>
+                    <div class="subject-content">
+                        <ul>
+                            <li><i class="fas fa-book"></i> English Language</li>
+                            <li><i class="fas fa-calculator"></i> Mathematics</li>
+                            <li><i class="fas fa-flask"></i> Integrated Science</li>
+                            <li><i class="fas fa-globe"></i> Social Studies</li>
+                            <li><i class="fas fa-paint-brush"></i> Creative and Technology Studies (CTS)</li>
+                            <li><i class="fas fa-cross"></i> Religious Education</li>
+                            <li><i class="fas fa-running"></i> Physical Education</li>
+                            <li><i class="fas fa-palette"></i> Art</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subject-box" id="box2">
+                    <div class="subject-header-box">Grade 3-4</div>
+                    <div class="subject-content">
+                        <ul>
+                            <li><i class="fas fa-book"></i> English Language</li>
+                            <li><i class="fas fa-calculator"></i> Mathematics</li>
+                            <li><i class="fas fa-flask"></i> Integrated Science</li>
+                            <li><i class="fas fa-globe"></i> Social Studies</li>
+                            <li><i class="fas fa-paint-brush"></i> Creative and Technology Studies (CTS)</li>
+                            <li><i class="fas fa-cross"></i> Religious Education</li>
+                            <li><i class="fas fa-running"></i> Physical Education</li>
+                            <li><i class="fas fa-music"></i> Music</li>
+                            <li><i class="fas fa-palette"></i> Art</li>
+                            <li><i class="fas fa-brain"></i> Verbal Reasoning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subject-box" id="box3">
+                    <div class="subject-header-box">Grade 5-7</div>
+                    <div class="subject-content">
+                        <ul>
+                            <li><i class="fas fa-book"></i> English Language</li>
+                            <li><i class="fas fa-calculator"></i> Mathematics</li>
+                            <li><i class="fas fa-flask"></i> Integrated Science</li>
+                            <li><i class="fas fa-globe"></i> Social Studies</li>
+                            <li><i class="fas fa-paint-brush"></i> Creative and Technology Studies (CTS)</li>
+                            <li><i class="fas fa-cross"></i> Religious Education</li>
+                            <li><i class="fas fa-running"></i> Physical Education</li>
+                            <li><i class="fas fa-music"></i> Music</li>
+                            <li><i class="fas fa-scroll"></i> Special Paper 1</li>
+                            <li><i class="fas fa-scroll"></i> Special Paper 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Note:</strong> Creative and Technology Studies (CTS) consists of Expressive Arts, Home Economics and Technology Studies.</p>
+    </footer>
+</body>
+</html>

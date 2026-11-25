@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>96th Agricultural Show - School Name </title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Global Colors */
+        :root {
+            --primary-color: #1e90ff; /* Blue for school representation */
+            --secondary-color: #32cd32; /* Green for agricultural theme */
+            --background-color: #f0f8ff; /* Light blue background */
+            --text-color: #333;
+            --light-text-color: #555;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #e0e0e0;
+        }
+
+        /* Event Intro Section */
+        .event-intro {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: var(--background-color);
+        }
+
+        .event-intro h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .event-intro p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: var(--light-text-color);
+        }
+
+        /* Achievements Section */
+        .achievements {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .achievement-box {
+            background-color: var(--secondary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            color: white;
+        }
+
+        .achievement-box h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .achievement-box p {
+            font-size: 16px;
+            color: #f0f8ff;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 40px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .gallery h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Icon Styles */
+        .fa-icon {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>School Name</h1>
+        <h2>96th Agricultural Show Achievements</h2>
+        <p>Celebrating Excellence in Art, Poetry and Essay Writing</p>
+    </header>
+
+    <section class="event-intro">
+        <h3>About the Annual Agricultural Show</h3>
+        <p>The Agricultural and Commercial Show of Zambia is a major event that showcases the country's achievements in agriculture, commerce, and industry. It brings together participants from diverse sectors to celebrate innovation, creativity, and the spirit of competition. Our students proudly represented our school, showcasing their talents in various categories and bringing home victories in art, poetry, and essay writing.</p>
+    </section>
+
+    <section class="achievements">
+        <div class="achievement-box">
+            <i class="fas fa-palette fa-icon"></i>
+            <h4>Art Competition</h4>
+            <p>Our talented artists won top positions with their vibrant and meaningful artwork that highlighted environmental conservation and cultural heritage.</p>
+        </div>
+        <div class="achievement-box">
+            <i class="fas fa-feather-alt fa-icon"></i>
+            <h4>Poetry</h4>
+            <p>The poetry entries captivated the judges with their creativity and depth, earning our students recognition for their powerful words and expressions.</p>
+        </div>
+        <div class="achievement-box">
+            <i class="fas fa-book fa-icon"></i>
+            <h4>Essay Writing</h4>
+            <p>Our essayists impressed with their insightful writings on the theme of sustainability and agricultural innovation, securing wins in multiple categories.</p>
+        </div>
+    </section>
+
+
+</body>
+</html>
